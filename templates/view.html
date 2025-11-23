@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registered Students</title>
+  <style>
+    body { font-family: Poppins, sans-serif; background: #fafafa; padding: 30px; }
+    h2 { text-align: center; color: #333; }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      background: white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    th, td {
+      padding: 10px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+    th { background: #ff5f6d; color: white; }
+    tr:hover { background-color: #f8f9fa; }
+  </style>
+</head>
+<body>
+  <h2>Registered Students</h2>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Reg No</th>
+      <th>Full Name</th>
+      <th>Class</th>
+      <th>Gender</th>
+      <th>Skills</th>
+    </tr>
+    {% for s in students %}
+    <tr>
+      <td>{{ s[0] }}</td>
+      <td>{{ s[1] }}</td>
+      <td>{{ s[3] }}</td>
+      <td>{{ s[6] }}</td>
+      <td>{{ s[5] }}</td>
+      <td>{{ s[8] }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+
+  <div style="text-align:center; margin-top:15px;">
+    <a href="/">⬅ Back to Form</a>
+  </div>
+</body>
+</html>
